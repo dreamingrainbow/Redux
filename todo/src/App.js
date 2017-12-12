@@ -1,14 +1,12 @@
 import React from 'react';
-import TodoList from './containers/TodoList';
-import TodoDetail from './containers/TodoDetail';
-import TodoForm from  './components/TodoForm';
+import TodoList from './components/TodoList'; 
+import TodoForm from './components/TodoForm';
 import './App.css';
 
-const App= (props) => {
+const App = (props) => {
     return (
       <div>
        <TodoList />
-       <TodoDetail />
        <TodoForm />
       </div>
     );

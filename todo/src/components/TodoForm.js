@@ -5,7 +5,7 @@ import { addTodo } from '../actions';
 class TodoForm extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { newTodoValue: ''};
+		this.state = { newTodoValue: '', completed: false};
 		this.addTodo = this.addTodo.bind(this);
 		this.updateNewTodo =  this.updateNewTodo.bind(this);
 	}
@@ -30,4 +30,4 @@ class TodoForm extends Component {
 }
 const mapStateToProps = state => { return { todos:state.todos }};
 
-export default connect(mapStateToProps)(TodoForm);
+export default connect(mapStateToProps, {addTodo})(TodoForm);

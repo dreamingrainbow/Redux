@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Todo from './Todo';
 
-const Todos = props => {
+const TodoList = props => {
 	const todos = props.todos.map((todo, i) => <Todo todo={todo} key={i} index={i} />);
 	return (<ul>{ todos }</ul>);
 }
-const mapStateToProps = state => {todos:state.todos};
-export default connect(mapStateToProps)(Todos);
+const mapStateToProps = state => {return{todos: state.todo}};
+export default connect(mapStateToProps)(TodoList);
